@@ -21,6 +21,8 @@ public class Post {
     private Date date;
     @ManyToOne(fetch = FetchType.EAGER)
     private Author author;
+    @Version
+    private Long version;
 
     public Post() {
         super();

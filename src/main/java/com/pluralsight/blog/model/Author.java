@@ -24,6 +24,8 @@ public class Author {
     private String password;
     @OneToMany
     private List<Post> posts;
+    @Version
+    private Long version;
 
 
     public Author() {
