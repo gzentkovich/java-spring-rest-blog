@@ -34,8 +34,8 @@ public class DatabaseLoader implements ApplicationRunner {
         authors.addAll(Arrays.asList(
                 new Author("sholderness", "Sarah", "Holderness", "password"),
                 new Author("tbell", "Tom", "Bell", "password"),
-                new Author("flash", "Barry", "Allen", "password"),
-                new Author("penquin", "Oswald", "Cobblepott","password")
+                new Author("efisher", "Eric", "Fisher", "password"),
+                new Author("csouza", "Carlos", "Souza","password")
         ));
         authorRepository.saveAll(authors);
 
