@@ -8,7 +8,6 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -20,8 +19,11 @@ public class DatabaseLoader implements ApplicationRunner {
             "Earbuds", "Speakers", "Tripod", "Instant Pot", "Coffee Cup", "Keyboard", "Sunglasses"};
     public List<Post> randomPosts = new ArrayList<>();
     public List<Author> authors = new ArrayList<>();
+    private final PostRepository postRepository;
 
-    public DatabaseLoader() {
+    @Autowired
+    public DatabaseLoader(PostRepository postRepository) {
+        this.postRepository = postRepository;
     }
 
     @Override
