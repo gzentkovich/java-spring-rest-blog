@@ -32,13 +32,11 @@ public class DatabaseLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         authors.addAll(Arrays.asList(
-                new Author("Vanquish", "Tom", "Hardy", "password"),
-                new Author("theKid", "William", "Anthrum", "password"),
+                new Author("sholderness", "Sarah", "Holderness", "password"),
+                new Author("tbell", "Tom", "Bell", "password"),
                 new Author("flash", "Barry", "Allen", "password"),
                 new Author("penquin", "Oswald", "Cobblepott","password")
-
         ));
-
         authorRepository.saveAll(authors);
 
         IntStream.range(0,40).forEach(i->{
